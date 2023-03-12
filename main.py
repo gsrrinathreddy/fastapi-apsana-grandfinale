@@ -1,9 +1,14 @@
 # This is a sample Python script.
+import uvicorn
+from fastapi import FastAPI
 
+app = FastAPI()
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
+@app.get("/")
+def root():
+    return {"welcome to github session"}
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
